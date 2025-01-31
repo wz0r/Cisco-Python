@@ -36,3 +36,13 @@ lupd = ospf_route[43:48]
 intf = ospf_route[50:]
 
 template = {'Prefix': ipadd, 'AD/Metric' : metr,'Next-Hop' : nhop, 'Last update' : lupd,'Outbound Interface' : intf}
+
+template = (f" Prefix: {ospf_route.split()[0]:>27} \n AD/Metric: {ospf_route.split()[1]:>24} \n Next-Hop: {ospf_route.split()[3]:>26} \n Last update: {
+     ...: ospf_route.split()[4]:>23} \n Outbound Interface: {ospf_route.split()[5]}")
+ 
+ Prefix:                10.0.24.0/24 
+ AD/Metric:                 [110/41] 
+ Next-Hop:                 10.0.13.3, 
+ Last update:                  3d18h, 
+ Outbound Interface: FastEthernet0/0
+
