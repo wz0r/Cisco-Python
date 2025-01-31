@@ -27,3 +27,10 @@ set1 = list(command1[-9:].replace(',',''))
 set2 = list(command2[-7:].replace(',',''))
 
 sorted(set(set1).intersection(set2))
+
+In [231]: command1.split()
+Out[231]: ['switchport', 'trunk', 'allowed', 'vlan', '1,2,3,5,8']
+
+cmd1 = set(command1.split()[-1].split(','))
+cmd2 = set(command2.split()[-1].split(','))
+sorted(cmd1.intersection(cmd2))
