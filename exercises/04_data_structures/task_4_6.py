@@ -28,3 +28,11 @@ Next-Hop              {}
 Last update           {}
 Outbound Interface    {}
 """
+
+ipadd = ospf_route[6:18]
+metr = ospf_route[20:26]
+nhop = ospf_route[32:41]
+lupd = ospf_route[43:48]
+intf = ospf_route[50:]
+
+template = {'Prefix': ipadd, 'AD/Metric' : metr,'Next-Hop' : nhop, 'Last update' : lupd,'Outbound Interface' : intf}
