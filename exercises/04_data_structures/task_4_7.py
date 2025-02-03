@@ -16,3 +16,6 @@
 """
 
 mac = "AAAA:BBBB:CCCC"
+
+
+'{0:08b} {1:08b} {2:08b} {3:08b}'.format(int(macr[0], base=16), int(macr[1], base=16),int(macr[2], base=16), int(macr[3], base=16))
